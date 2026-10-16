@@ -77,6 +77,42 @@ td,th{text-align:left;padding:6px 4px;border-bottom:1px solid var(--line)}
 </head>
 <body>
 <div id="app"></div>
+ <!-- BOTÃO PARA BAIXAR O APLICATIVO -->
+<a id="download-app"
+   href="./Aprenda-a-Programar-IPPS.apk"
+   download="Aprenda-a-Programar-IPPS.apk"
+   aria-label="Baixar aplicação IPPS">
+  <span aria-hidden="true">↓</span> Baixar app
+</a>
+
+<style>
+#download-app {
+  position: fixed;
+  top: calc(10px + env(safe-area-inset-top, 0px));
+  right: 10px;
+  z-index: 14;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  background: var(--ok, #137a45);
+  color: #fff;
+  font: 600 12px/1.4 Sora, system-ui, sans-serif;
+  text-decoration: none;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.16);
+}
+
+#download-app span {
+  font-size: 16px;
+  line-height: 1;
+}
+
+#download-app:focus-visible {
+  outline: 3px solid var(--gold, #f2b705);
+  outline-offset: 3px;
+}
+</style>
 <nav id="bn" aria-label="Navegação"><button data-n="home">🏠<span>Início</span></button><button data-n="comp">💻<span>Compilador</span></button><button data-n="sobre">ℹ️<span>Sobre</span></button></nav>
 <button id="fab" aria-label="Abrir o Agente IPPS"></button>
 <div id="pn" hidden role="dialog" aria-label="Agente IPPS"><div class="ph2"><b>🤖 Agente IPPS</b><button data-a="x" aria-label="Fechar">✕</button></div><div id="ms" class="chat" aria-live="polite"></div><div class="two" style="grid-template-columns:1fr auto;margin:0"><input id="ci" maxlength="600" placeholder="Escreve a tua pergunta..." aria-label="Pergunta ao Agente IPPS"><button class="go" style="margin:0;width:auto" data-a="send">Enviar</button></div></div>
